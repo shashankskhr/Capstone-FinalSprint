@@ -1,0 +1,1033 @@
+<!-- ===== HERO SECTION ===== -->
+<div style="
+  background: linear-gradient(
+    135deg,
+    #1a1a2e 0%,
+    #16213e 50%,
+    #0f3460 100%);
+  color: #ffffff;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;">
+
+  <!-- Background circles -->
+  <div style="
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: rgba(255,193,7,0.1);
+    border-radius: 50%;">
+  </div>
+  <div style="
+    position: absolute;
+    bottom: -150px;
+    left: -100px;
+    width: 500px;
+    height: 500px;
+    background: rgba(255,193,7,0.05);
+    border-radius: 50%;">
+  </div>
+
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Left Content -->
+      <div class="col-md-6">
+        <div style="
+          font-size: 0.9rem;
+          color: #ffc107;
+          font-weight: 600;
+          letter-spacing: 3px;
+          text-transform: uppercase;
+          margin-bottom: 15px;">
+          Welcome to ShopForHome
+        </div>
+
+        <h1 style="
+          font-size: 3.5rem;
+          font-weight: 800;
+          line-height: 1.2;
+          margin-bottom: 20px;">
+          Make Your Home
+          <span style="color: #ffc107;">
+            Beautiful
+          </span>
+        </h1>
+
+        <p style="
+          font-size: 1.1rem;
+          color: rgba(255,255,255,0.8);
+          margin-bottom: 35px;
+          line-height: 1.8;">
+          Discover premium home décor,
+          furniture, and lighting.
+          Transform your living space
+          with our curated collection.
+        </p>
+
+        <div class="d-flex gap-3
+          flex-wrap">
+          <button
+            type="button"
+            (click)="router.navigate(
+              ['/products'])"
+            style="
+              padding: 15px 35px;
+              background-color: #ffc107;
+              color: #212529;
+              border: none;
+              border-radius: 50px;
+              font-size: 1rem;
+              font-weight: 700;
+              cursor: pointer;
+              transition: all 0.3s;">
+            Shop Now →
+          </button>
+
+          <button
+            type="button"
+            *ngIf="!authService.isLoggedIn()"
+            (click)="router.navigate(
+              ['/register'])"
+            style="
+              padding: 15px 35px;
+              background-color: transparent;
+              color: #ffffff;
+              border: 2px solid #ffffff;
+              border-radius: 50px;
+              font-size: 1rem;
+              font-weight: 700;
+              cursor: pointer;">
+            Join Free
+          </button>
+        </div>
+
+        <!-- Mini stats -->
+        <div class="d-flex gap-4
+          mt-5 flex-wrap">
+          <div *ngFor="let s of stats"
+            style="text-align: center;">
+            <div style="
+              font-size: 1.5rem;
+              font-weight: 800;
+              color: #ffc107;">
+              {{ s.icon }} {{ s.count }}
+            </div>
+            <div style="
+              font-size: 0.8rem;
+              color: rgba(255,255,255,0.7);">
+              {{ s.label }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Content -->
+      <div class="col-md-6 mt-5 mt-md-0">
+        <div class="row g-3">
+          <div class="col-6">
+            <div style="
+              background: rgba(
+                255,255,255,0.1);
+              border-radius: 20px;
+              padding: 20px;
+              text-align: center;
+              backdrop-filter: blur(10px);
+              border: 1px solid rgba(
+                255,255,255,0.2);">
+              <div style="font-size: 3rem;">
+                🛋️
+              </div>
+              <div style="
+                font-weight: 600;
+                margin-top: 10px;">
+                Furniture
+              </div>
+            </div>
+          </div>
+          <div class="col-6 mt-4">
+            <div style="
+              background: rgba(
+                255,193,7,0.2);
+              border-radius: 20px;
+              padding: 20px;
+              text-align: center;
+              backdrop-filter: blur(10px);
+              border: 1px solid rgba(
+                255,193,7,0.3);">
+              <div style="font-size: 3rem;">
+                💡
+              </div>
+              <div style="
+                font-weight: 600;
+                margin-top: 10px;">
+                Lighting
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div style="
+              background: rgba(
+                255,193,7,0.2);
+              border-radius: 20px;
+              padding: 20px;
+              text-align: center;
+              backdrop-filter: blur(10px);
+              border: 1px solid rgba(
+                255,193,7,0.3);">
+              <div style="font-size: 3rem;">
+                🏺
+              </div>
+              <div style="
+                font-weight: 600;
+                margin-top: 10px;">
+                Home Décor
+              </div>
+            </div>
+          </div>
+          <div class="col-6 mt-4">
+            <div style="
+              background: rgba(
+                255,255,255,0.1);
+              border-radius: 20px;
+              padding: 20px;
+              text-align: center;
+              backdrop-filter: blur(10px);
+              border: 1px solid rgba(
+                255,255,255,0.2);">
+              <div style="font-size: 3rem;">
+                🪴
+              </div>
+              <div style="
+                font-weight: 600;
+                margin-top: 10px;">
+                Plants
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== CATEGORIES SECTION ===== -->
+<div style="
+  background-color: #f8f9fa;
+  padding: 80px 0;">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <div style="
+        font-size: 0.85rem;
+        color: #ffc107;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-bottom: 10px;">
+        Browse By Category
+      </div>
+      <h2 style="
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: #212529;">
+        Shop by Category
+      </h2>
+      <div style="
+        width: 60px;
+        height: 4px;
+        background-color: #ffc107;
+        margin: 15px auto 0;">
+      </div>
+    </div>
+
+    <div class="row g-4
+      justify-content-center">
+      <div class="col-md-3 col-sm-6"
+        *ngFor="let cat of categories">
+        <div
+          (click)="browseByCategory(
+            cat.categoryId)"
+          style="
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 40px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px
+              rgba(0,0,0,0.08);
+            border: 2px solid transparent;"
+          onmouseover="
+            this.style.transform=
+              'translateY(-10px)';
+            this.style.borderColor=
+              '#ffc107';
+            this.style.boxShadow=
+              '0 15px 40px rgba(0,0,0,0.15)';"
+          onmouseout="
+            this.style.transform=
+              'translateY(0)';
+            this.style.borderColor=
+              'transparent';
+            this.style.boxShadow=
+              '0 5px 20px rgba(0,0,0,0.08)';">
+
+          <div style="
+            font-size: 3.5rem;
+            margin-bottom: 15px;">
+            {{ getCategoryIcon(
+              cat.categoryName) }}
+          </div>
+
+          <h5 style="
+            font-weight: 700;
+            color: #212529;
+            margin-bottom: 8px;">
+            {{ cat.categoryName }}
+          </h5>
+
+          <p style="
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-bottom: 15px;">
+            Explore our collection
+          </p>
+
+          <div style="
+            display: inline-block;
+            padding: 8px 20px;
+            background-color: #212529;
+            color: #ffffff;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;">
+            View All →
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== FEATURED PRODUCTS ===== -->
+<div style="
+  background-color: #ffffff;
+  padding: 80px 0;">
+  <div class="container">
+
+    <div class="d-flex justify-content-between
+      align-items-center mb-5
+      flex-wrap gap-3">
+      <div>
+        <div style="
+          font-size: 0.85rem;
+          color: #ffc107;
+          font-weight: 700;
+          letter-spacing: 3px;
+          text-transform: uppercase;
+          margin-bottom: 10px;">
+          Featured Products
+        </div>
+        <h2 style="
+          font-size: 2.2rem;
+          font-weight: 800;
+          color: #212529;
+          margin: 0;">
+          Trending Now
+        </h2>
+      </div>
+      <button
+        type="button"
+        (click)="router.navigate(['/products'])"
+        style="
+          padding: 12px 25px;
+          background-color: #212529;
+          color: #ffffff;
+          border: none;
+          border-radius: 50px;
+          font-weight: 600;
+          cursor: pointer;">
+        View All Products →
+      </button>
+    </div>
+
+    <!-- Loading -->
+    <div *ngIf="loading"
+      class="text-center py-5">
+      <div class="spinner-border"
+        style="color: #ffc107;"
+        role="status">
+      </div>
+      <p class="mt-2 text-muted">
+        Loading products...
+      </p>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="row g-4"
+      *ngIf="!loading">
+      <div class="col-md-4 col-sm-6"
+        *ngFor="let p of featuredProducts">
+        <div style="
+          background: #ffffff;
+          border-radius: 16px;
+          overflow: hidden;
+          box-shadow: 0 5px 20px
+            rgba(0,0,0,0.08);
+          transition: all 0.3s;
+          border: 1px solid #f0f0f0;"
+          onmouseover="
+            this.style.transform=
+              'translateY(-8px)';
+            this.style.boxShadow=
+              '0 20px 40px rgba(0,0,0,0.15)';"
+          onmouseout="
+            this.style.transform=
+              'translateY(0)';
+            this.style.boxShadow=
+              '0 5px 20px rgba(0,0,0,0.08)';">
+
+          <!-- Image -->
+          <div style="
+            position: relative;
+            overflow: hidden;">
+            <img
+              [src]="getImageUrl(p.imageUrl)"
+              style="
+                width: 100%;
+                height: 220px;
+                object-fit: cover;
+                transition: transform 0.3s;"
+              [alt]="p.productName"
+              (error)="onImageError($event)"
+              onmouseover="
+                this.style.transform=
+                  'scale(1.05)';"
+              onmouseout="
+                this.style.transform=
+                  'scale(1)';">
+
+            <!-- Category Badge -->
+            <div style="
+              position: absolute;
+              top: 12px;
+              left: 12px;
+              background-color: #ffc107;
+              color: #212529;
+              padding: 4px 12px;
+              border-radius: 50px;
+              font-size: 0.75rem;
+              font-weight: 700;">
+              {{ p.category?.categoryName }}
+            </div>
+
+            <!-- Stock Badge -->
+            <div
+              *ngIf="p.stock < 10 &&
+                p.stock > 0"
+              style="
+                position: absolute;
+                top: 12px;
+                right: 12px;
+                background-color: #dc3545;
+                color: #ffffff;
+                padding: 4px 12px;
+                border-radius: 50px;
+                font-size: 0.75rem;
+                font-weight: 700;">
+              Low Stock
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div style="padding: 20px;">
+            <h6 style="
+              font-weight: 700;
+              color: #212529;
+              margin-bottom: 8px;
+              font-size: 1rem;">
+              {{ p.productName }}
+            </h6>
+
+            <div class="d-flex
+              justify-content-between
+              align-items-center
+              mb-3">
+              <div style="
+                font-size: 1.3rem;
+                font-weight: 800;
+                color: #212529;">
+                ₹{{ p.price }}
+              </div>
+              <div style="
+                background-color: #fff8e1;
+                color: #f59e0b;
+                padding: 4px 10px;
+                border-radius: 50px;
+                font-size: 0.85rem;
+                font-weight: 600;">
+                ⭐ {{ p.rating }}
+              </div>
+            </div>
+
+            <button
+              type="button"
+              (click)="router.navigate(
+                ['/products', p.productId])"
+              style="
+                display: block;
+                width: 100%;
+                padding: 10px;
+                background-color: #212529;
+                color: #ffffff;
+                border: none;
+                border-radius: 10px;
+                font-weight: 600;
+                cursor: pointer;
+                font-size: 0.9rem;">
+              View Details →
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== OFFERS BANNER ===== -->
+<div style="
+  background: linear-gradient(
+    135deg,
+    #ffc107 0%,
+    #ff9800 100%);
+  padding: 60px 0;">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-8">
+        <h2 style="
+          font-size: 2rem;
+          font-weight: 800;
+          color: #212529;
+          margin-bottom: 10px;">
+          🎉 Special Offer!
+          Get Up to 30% Off
+        </h2>
+        <p style="
+          color: #212529;
+          font-size: 1.1rem;
+          margin: 0;
+          opacity: 0.8;">
+          Use coupon codes to get
+          exclusive discounts on
+          selected products.
+        </p>
+      </div>
+      <div class="col-md-4
+        text-md-end mt-4 mt-md-0">
+        <button
+          type="button"
+          (click)="router.navigate(
+            ['/products'])"
+          style="
+            padding: 15px 35px;
+            background-color: #212529;
+            color: #ffffff;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;">
+          Shop & Save →
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== WHY CHOOSE US ===== -->
+<div style="
+  background-color: #f8f9fa;
+  padding: 80px 0;">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <div style="
+        font-size: 0.85rem;
+        color: #ffc107;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-bottom: 10px;">
+        Why Choose Us
+      </div>
+      <h2 style="
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: #212529;">
+        Why ShopForHome?
+      </h2>
+      <div style="
+        width: 60px;
+        height: 4px;
+        background-color: #ffc107;
+        margin: 15px auto 0;">
+      </div>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-md-3 col-sm-6">
+        <div style="
+          background: #ffffff;
+          border-radius: 16px;
+          padding: 30px 20px;
+          text-align: center;
+          box-shadow: 0 5px 20px
+            rgba(0,0,0,0.06);">
+          <div style="
+            width: 70px;
+            height: 70px;
+            background: #fff8e1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;">
+            🚚
+          </div>
+          <h5 style="
+            font-weight: 700;
+            color: #212529;
+            margin-bottom: 10px;">
+            Free Delivery
+          </h5>
+          <p style="
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin: 0;">
+            Free shipping on all
+            orders above ₹999
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div style="
+          background: #212529;
+          border-radius: 16px;
+          padding: 30px 20px;
+          text-align: center;
+          box-shadow: 0 5px 20px
+            rgba(0,0,0,0.15);">
+          <div style="
+            width: 70px;
+            height: 70px;
+            background: rgba(
+              255,193,7,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;">
+            🔒
+          </div>
+          <h5 style="
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 10px;">
+            Secure Payment
+          </h5>
+          <p style="
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+            margin: 0;">
+            100% secure payment
+            with encryption
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div style="
+          background: #ffffff;
+          border-radius: 16px;
+          padding: 30px 20px;
+          text-align: center;
+          box-shadow: 0 5px 20px
+            rgba(0,0,0,0.06);">
+          <div style="
+            width: 70px;
+            height: 70px;
+            background: #fff8e1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;">
+            🔄
+          </div>
+          <h5 style="
+            font-weight: 700;
+            color: #212529;
+            margin-bottom: 10px;">
+            Easy Returns
+          </h5>
+          <p style="
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin: 0;">
+            30 day easy return
+            and exchange policy
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div style="
+          background: #ffffff;
+          border-radius: 16px;
+          padding: 30px 20px;
+          text-align: center;
+          box-shadow: 0 5px 20px
+            rgba(0,0,0,0.06);">
+          <div style="
+            width: 70px;
+            height: 70px;
+            background: #fff8e1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;">
+            💬
+          </div>
+          <h5 style="
+            font-weight: 700;
+            color: #212529;
+            margin-bottom: 10px;">
+            24/7 Support
+          </h5>
+          <p style="
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin: 0;">
+            Round the clock customer
+            support always available
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===== TESTIMONIALS ===== -->
+<div style="
+  background-color: #ffffff;
+  padding: 80px 0;">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <div style="
+        font-size: 0.85rem;
+        color: #ffc107;
+        font-weight: 700;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-bottom: 10px;">
+        Testimonials
+      </div>
+      <h2 style="
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: #212529;">
+        What Our Customers Say
+      </h2>
+      <div style="
+        width: 60px;
+        height: 4px;
+        background-color: #ffc107;
+        margin: 15px auto 0;">
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4"
+        *ngFor="let t of testimonials">
+        <div style="
+          background: #f8f9fa;
+          border-radius: 16px;
+          padding: 30px;
+          box-shadow: 0 5px 20px
+            rgba(0,0,0,0.06);
+          border-left: 4px solid #ffc107;">
+
+          <div style="
+            font-size: 1.5rem;
+            margin-bottom: 15px;">
+            <span *ngFor="let s of
+              getStars(t.rating)">
+              {{ s }}
+            </span>
+          </div>
+
+          <p style="
+            color: #6c757d;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-style: italic;">
+            "{{ t.text }}"
+          </p>
+
+          <div class="d-flex
+            align-items-center gap-3">
+            <div style="
+              width: 45px;
+              height: 45px;
+              background-color: #212529;
+              color: #ffc107;
+              border-radius: 50%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-weight: 700;
+              font-size: 0.85rem;">
+              {{ t.avatar }}
+            </div>
+            <div>
+              <div style="
+                font-weight: 700;
+                color: #212529;">
+                {{ t.name }}
+              </div>
+              <div style="
+                font-size: 0.8rem;
+                color: #6c757d;">
+                Verified Customer
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== CTA SECTION ===== -->
+<div style="
+  background: linear-gradient(
+    135deg,
+    #1a1a2e 0%,
+    #0f3460 100%);
+  padding: 80px 0;
+  text-align: center;
+  color: #ffffff;">
+  <div class="container">
+    <h2 style="
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 15px;">
+      Ready to Transform
+      Your Home? 🏠
+    </h2>
+    <p style="
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 35px;">
+      Join thousands of happy customers
+      and start shopping today!
+    </p>
+    <div class="d-flex gap-3
+      justify-content-center flex-wrap">
+      <button
+        type="button"
+        (click)="router.navigate(['/products'])"
+        style="
+          padding: 15px 40px;
+          background-color: #ffc107;
+          color: #212529;
+          border: none;
+          border-radius: 50px;
+          font-size: 1rem;
+          font-weight: 700;
+          cursor: pointer;">
+        Start Shopping →
+      </button>
+      <button
+        type="button"
+        *ngIf="!authService.isLoggedIn()"
+        (click)="router.navigate(['/register'])"
+        style="
+          padding: 15px 40px;
+          background-color: transparent;
+          color: #ffffff;
+          border: 2px solid #ffffff;
+          border-radius: 50px;
+          font-size: 1rem;
+          font-weight: 700;
+          cursor: pointer;">
+        Create Account
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer style="
+  background-color: #0d0d0d;
+  color: rgba(255,255,255,0.7);
+  padding: 40px 0 20px;">
+  <div class="container">
+    <div class="row g-4 mb-4">
+
+      <div class="col-md-4">
+        <h5 style="
+          color: #ffc107;
+          font-weight: 800;
+          font-size: 1.3rem;
+          margin-bottom: 15px;">
+          🏠 ShopForHome
+        </h5>
+        <p style="font-size: 0.9rem;">
+          Your one-stop destination
+          for premium home décor,
+          furniture and lighting.
+        </p>
+      </div>
+
+      <div class="col-md-2">
+        <h6 style="
+          color: #ffffff;
+          font-weight: 700;
+          margin-bottom: 15px;">
+          Quick Links
+        </h6>
+        <ul style="
+          list-style: none;
+          padding: 0;
+          font-size: 0.9rem;">
+          <li style="margin-bottom: 8px;">
+            <a (click)="router.navigate([''])"
+              style="
+                color: rgba(255,255,255,0.7);
+                cursor: pointer;">
+              Home
+            </a>
+          </li>
+          <li style="margin-bottom: 8px;">
+            <a (click)="router.navigate(
+              ['/products'])"
+              style="
+                color: rgba(255,255,255,0.7);
+                cursor: pointer;">
+              Products
+            </a>
+          </li>
+          <li style="margin-bottom: 8px;">
+            <a (click)="router.navigate(
+              ['/cart'])"
+              style="
+                color: rgba(255,255,255,0.7);
+                cursor: pointer;">
+              Cart
+            </a>
+          </li>
+          <li style="margin-bottom: 8px;">
+            <a (click)="router.navigate(
+              ['/wishlist'])"
+              style="
+                color: rgba(255,255,255,0.7);
+                cursor: pointer;">
+              Wishlist
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h6 style="
+          color: #ffffff;
+          font-weight: 700;
+          margin-bottom: 15px;">
+          Categories
+        </h6>
+        <ul style="
+          list-style: none;
+          padding: 0;
+          font-size: 0.9rem;">
+          <li *ngFor="let cat of categories"
+            style="margin-bottom: 8px;">
+            <a (click)="browseByCategory(
+              cat.categoryId)"
+              style="
+                color: rgba(255,255,255,0.7);
+                cursor: pointer;">
+              {{ getCategoryIcon(
+                cat.categoryName) }}
+              {{ cat.categoryName }}
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-md-3">
+        <h6 style="
+          color: #ffffff;
+          font-weight: 700;
+          margin-bottom: 15px;">
+          Contact Us
+        </h6>
+        <ul style="
+          list-style: none;
+          padding: 0;
+          font-size: 0.9rem;">
+          <li style="margin-bottom: 8px;">
+            📧 support@shopforhome.com
+          </li>
+          <li style="margin-bottom: 8px;">
+            📞 +91 9876543210
+          </li>
+          <li style="margin-bottom: 8px;">
+            📍 Mumbai, India
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <hr style="
+      border-color: rgba(255,255,255,0.1);">
+
+    <div class="d-flex
+      justify-content-between
+      align-items-center flex-wrap gap-2">
+      <p style="
+        margin: 0;
+        font-size: 0.85rem;">
+        © 2024 ShopForHome.
+        All rights reserved.
+      </p>
+      <p style="
+        margin: 0;
+        font-size: 0.85rem;
+        color: #ffc107;">
+        Made with ❤️ for your home
+      </p>
+    </div>
+
+  </div>
+</footer>

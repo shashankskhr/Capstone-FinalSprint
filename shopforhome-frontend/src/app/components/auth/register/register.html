@@ -1,0 +1,157 @@
+<div class="container mt-5 mb-5">
+  <div class="row justify-content-center">
+    <div class="col-md-5">
+      <div class="card shadow">
+
+        <div class="card-header bg-dark text-white text-center py-3">
+          <h4 class="mb-0">🏠 Create Account</h4>
+        </div>
+
+        <div class="card-body p-4">
+
+          <!-- ✅ Success Screen -->
+          <div *ngIf="registered" class="text-center py-3">
+            <div
+              style="
+                background-color: #d4edda;
+                color: #155724;
+                border: 1px solid #c3e6cb;
+                border-radius: 10px;
+                padding: 25px 20px;
+                margin-bottom: 20px;
+              ">
+              <h4 style="color: #155724; font-weight: 700;">
+                ✅ Registration Successful!
+              </h4>
+              <p style="
+                margin: 10px 0 0 0;
+                font-size: 0.95rem;
+                color: #155724;">
+                Your account has been created.
+              </p>
+            </div>
+
+            <button
+              type="button"
+              (click)="goToLogin()"
+              style="
+                display: block;
+                width: 100%;
+                padding: 12px;
+                background-color: #212529;
+                color: #ffffff;
+                border: 2px solid #212529;
+                border-radius: 8px;
+                font-size: 1rem;
+                font-weight: 600;
+                cursor: pointer;
+                outline: none;
+              ">
+              Go to Login →
+            </button>
+          </div>
+
+          <!-- 📝 Registration Form -->
+          <div *ngIf="!registered">
+
+            <!-- Error -->
+            <div
+              *ngIf="error"
+              style="
+                background-color: #f8d7da;
+                color: #721c24;
+                border: 1px solid #f5c6cb;
+                border-radius: 8px;
+                padding: 12px;
+                margin-bottom: 15px;
+                font-weight: 500;
+              ">
+              ❌ {{ error }}
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label fw-bold">
+                Full Name
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                [(ngModel)]="form.fullName"
+                placeholder="Enter your full name" />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label fw-bold">
+                Email
+              </label>
+              <input
+                type="email"
+                class="form-control"
+                [(ngModel)]="form.email"
+                placeholder="Enter your email" />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label fw-bold">
+                Password
+              </label>
+              <input
+                type="password"
+                class="form-control"
+                [(ngModel)]="form.password"
+                placeholder="Enter your password" />
+            </div>
+
+            <div class="mb-4">
+              <label class="form-label fw-bold">
+                Role
+              </label>
+              <select
+                class="form-select"
+                [(ngModel)]="form.role">
+                <option value="User">User</option>
+                <option value="Admin">Admin</option>
+              </select>
+            </div>
+
+            <div class="d-grid">
+              <button
+                type="button"
+                [disabled]="loading"
+                (click)="register()"
+                style="
+                  display: block;
+                  width: 100%;
+                  padding: 12px;
+                  background-color: #212529;
+                  color: #ffffff;
+                  border: 2px solid #212529;
+                  border-radius: 8px;
+                  font-size: 1rem;
+                  font-weight: 600;
+                  cursor: pointer;
+                  outline: none;
+                  -webkit-appearance: none;
+                  appearance: none;
+                ">
+                {{ loading ? 'Registering...' : 'Register' }}
+              </button>
+            </div>
+
+            <hr class="my-3">
+
+            <p class="text-center mb-0">
+              Already have an account?
+              <a routerLink="/login"
+                class="text-dark fw-bold">
+                Login here
+              </a>
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

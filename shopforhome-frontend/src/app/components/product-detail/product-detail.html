@@ -1,0 +1,208 @@
+<div class="container my-5">
+
+  <!-- Loading -->
+  <div *ngIf="loading" class="text-center py-5">
+    <div class="spinner-border text-dark"
+      role="status">
+    </div>
+    <p class="mt-2 text-muted">
+      Loading product...
+    </p>
+  </div>
+
+  <!-- Product -->
+  <div *ngIf="product && !loading">
+    <div class="row">
+
+      <!-- ✅ Fixed Image -->
+      <div class="col-md-5 mb-4">
+        <img
+          [src]="getImageUrl(product.imageUrl)"
+          class="img-fluid rounded shadow"
+          [alt]="product.productName"
+          (error)="onImageError($event)"
+          style="
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 12px;">
+      </div>
+
+      <!-- Details -->
+      <div class="col-md-7">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a routerLink="/products"
+                class="text-dark">
+                Products
+              </a>
+            </li>
+            <li class="breadcrumb-item active">
+              {{ product.productName }}
+            </li>
+          </ol>
+        </nav>
+
+        <h2 class="fw-bold">
+          {{ product.productName }}
+        </h2>
+
+        <p class="text-muted mb-2">
+          Category:
+          <strong>
+            {{ product.category?.categoryName }}
+          </strong>
+        </p>
+
+        <div class="d-flex align-items-center
+          gap-3 mb-3">
+          <h3 class="text-dark fw-bold mb-0">
+            ₹{{ product.price }}
+          </h3>
+          <span class="badge bg-warning
+            text-dark fs-6">
+            ⭐ {{ product.rating }}
+          </span>
+        </div>
+
+        <p class="mb-3">
+          {{ product.description }}
+        </p>
+
+        <p class="mb-3">
+          <span *ngIf="product.stock > 10"
+            class="badge bg-success fs-6">
+            ✅ In Stock ({{ product.stock }})
+          </span>
+          <span *ngIf="product.stock > 0 &&
+            product.stock <= 10"
+            class="badge bg-warning
+              text-dark fs-6">
+            ⚠️ Only {{ product.stock }} left!
+          </span>
+          <span *ngIf="product.stock === 0"
+            class="badge bg-danger fs-6">
+            ❌ Out of Stock
+          </span>
+        </p>
+
+        <!-- Messages -->
+        <div *ngIf="message" style="
+          background-color: #d4edda;
+          color: #155724;
+          border: 1px solid #c3e6cb;
+          border-radius: 8px;
+          padding: 10px 15px;
+          margin-bottom: 15px;
+          font-weight: 500;">
+          {{ message }}
+        </div>
+
+        <div *ngIf="error" style="
+          background-color: #f8d7da;
+          color: #721c24;
+          border: 1px solid #f5c6cb;
+          border-radius: 8px;
+          padding: 10px 15px;
+          margin-bottom: 15px;
+          font-weight: 500;">
+          {{ error }}
+        </div>
+
+        <!-- Quantity -->
+        <div class="d-flex align-items-center
+          gap-3 mb-4"
+          *ngIf="product.stock > 0">
+          <label class="fw-bold">Quantity:</label>
+          <div class="d-flex align-items-center
+            gap-2">
+            <button type="button"
+              (click)="decreaseQty()"
+              style="
+                width: 35px;
+                height: 35px;
+                background-color: #212529;
+                color: #ffffff;
+                border: none;
+                border-radius: 6px;
+                font-size: 1.2rem;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;">
+              −
+            </button>
+            <span class="fw-bold fs-5 px-2">
+              {{ quantity }}
+            </span>
+            <button type="button"
+              (click)="increaseQty()"
+              style="
+                width: 35px;
+                height: 35px;
+                background-color: #212529;
+                color: #ffffff;
+                border: none;
+                border-radius: 6px;
+                font-size: 1.2rem;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;">
+              +
+            </button>
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="d-flex gap-3 flex-wrap">
+          <button type="button"
+            [disabled]="product.stock === 0"
+            (click)="addToCart()"
+            style="
+              padding: 12px 30px;
+              background-color: #212529;
+              color: #ffffff;
+              border: 2px solid #212529;
+              border-radius: 8px;
+              font-size: 1rem;
+              font-weight: 600;
+              cursor: pointer;">
+            🛒 Add to Cart
+          </button>
+
+          <button type="button"
+            (click)="addToWishlist()"
+            style="
+              padding: 12px 30px;
+              background-color: #ffffff;
+              color: #dc3545;
+              border: 2px solid #dc3545;
+              border-radius: 8px;
+              font-size: 1rem;
+              font-weight: 600;
+              cursor: pointer;">
+            ❤️ Wishlist
+          </button>
+
+          <button type="button"
+            *ngIf="authService.isLoggedIn()"
+            (click)="router.navigate(['/cart'])"
+            style="
+              padding: 12px 30px;
+              background-color: #28a745;
+              color: #ffffff;
+              border: 2px solid #28a745;
+              border-radius: 8px;
+              font-size: 1rem;
+              font-weight: 600;
+              cursor: pointer;">
+            View Cart →
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

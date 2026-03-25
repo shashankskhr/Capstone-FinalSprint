@@ -1,0 +1,565 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\hp\\source\\repos\\ShopForHome\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\controllers\\api\\salesreportapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\controllers\\api\\salesreportapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\dtos\\salesreportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\dtos\\salesreportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\migrations\\20260317193501_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\migrations\\20260317193501_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\models\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\models\\wishlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\models\\wishlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\models\\cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\models\\usercoupon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\models\\usercoupon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\models\\discountcoupon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\models\\discountcoupon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\controllers\\api\\discountcouponapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\controllers\\api\\discountcouponapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\dtos\\validatecoupondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\dtos\\validatecoupondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\dtos\\assigncoupondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\dtos\\assigncoupondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\dtos\\createcoupondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\dtos\\createcoupondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\controllers\\api\\authapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\controllers\\api\\authapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\controllers\\api\\productsapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\controllers\\api\\productsapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\controllers\\api\\cartapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\controllers\\api\\cartapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\dtos\\updatequantitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\dtos\\updatequantitydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\dtos\\cartitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\dtos\\cartitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\dtos\\placeorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\dtos\\placeorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\controllers\\api\\wishlistapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\controllers\\api\\wishlistapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\controllers\\api\\ordersapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\controllers\\api\\ordersapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\controllers\\api\\searchapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\controllers\\api\\searchapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\dtos\\wishlistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\dtos\\wishlistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\dtos\\cartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\dtos\\cartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|c:\\users\\hp\\source\\repos\\shopforhome\\shopforhome\\controllers\\api\\usersapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEF5BE7E-F5C8-D277-5D51-40537506F05F}|ShopForHome\\ShopForHome.csproj|solutionrelative:shopforhome\\controllers\\api\\usersapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "ShopForHome\\Data\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:42:19.316Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Models\\User.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Models\\User.cs",
+              "RelativeToolTip": "ShopForHome\\Models\\User.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAIwCwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:30:08.977Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SalesReportDto.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\DTOs\\SalesReportDto.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\DTOs\\SalesReportDto.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\DTOs\\SalesReportDto.cs",
+              "RelativeToolTip": "ShopForHome\\DTOs\\SalesReportDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:40:30.228Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20260317193501_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Migrations\\20260317193501_InitialCreate.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\Migrations\\20260317193501_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Migrations\\20260317193501_InitialCreate.cs",
+              "RelativeToolTip": "ShopForHome\\Migrations\\20260317193501_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T19:35:01.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SalesReportApiController.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Controllers\\API\\SalesReportApiController.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\Controllers\\API\\SalesReportApiController.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Controllers\\API\\SalesReportApiController.cs",
+              "RelativeToolTip": "ShopForHome\\Controllers\\API\\SalesReportApiController.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAwwA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:50:49.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Models\\OrderItem.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\Models\\OrderItem.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Models\\OrderItem.cs",
+              "RelativeToolTip": "ShopForHome\\Models\\OrderItem.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAywBoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:34:26.688Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Models\\Order.cs",
+              "RelativeToolTip": "ShopForHome\\Models\\Order.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAIwCIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:33:40.32Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Wishlist.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Models\\Wishlist.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\Models\\Wishlist.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Models\\Wishlist.cs",
+              "RelativeToolTip": "ShopForHome\\Models\\Wishlist.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAIwBgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:33:12.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Models\\Cart.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\Models\\Cart.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Models\\Cart.cs",
+              "RelativeToolTip": "ShopForHome\\Models\\Cart.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAywBoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:32:38.476Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Models\\Product.cs",
+              "RelativeToolTip": "ShopForHome\\Models\\Product.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAywCMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:31:25.494Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Models\\Category.cs",
+              "RelativeToolTip": "ShopForHome\\Models\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAIwBEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:30:53.852Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserCoupon.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Models\\UserCoupon.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\Models\\UserCoupon.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Models\\UserCoupon.cs",
+              "RelativeToolTip": "ShopForHome\\Models\\UserCoupon.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAIwBsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:35:53.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DiscountCoupon.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Models\\DiscountCoupon.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\Models\\DiscountCoupon.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Models\\DiscountCoupon.cs",
+              "RelativeToolTip": "ShopForHome\\Models\\DiscountCoupon.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAIwBsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:35:16.334Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DiscountCouponApiController.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Controllers\\API\\DiscountCouponApiController.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\Controllers\\API\\DiscountCouponApiController.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Controllers\\API\\DiscountCouponApiController.cs",
+              "RelativeToolTip": "ShopForHome\\Controllers\\API\\DiscountCouponApiController.cs",
+              "ViewState": "AgIAAKgBAAAAAAAAAAAIwLkBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:51:41.055Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ValidateCouponDto.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\DTOs\\ValidateCouponDto.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\DTOs\\ValidateCouponDto.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\DTOs\\ValidateCouponDto.cs",
+              "RelativeToolTip": "ShopForHome\\DTOs\\ValidateCouponDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:52:34.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AssignCouponDto.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\DTOs\\AssignCouponDto.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\DTOs\\AssignCouponDto.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\DTOs\\AssignCouponDto.cs",
+              "RelativeToolTip": "ShopForHome\\DTOs\\AssignCouponDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T12:21:28.905Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "CreateCouponDto.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\DTOs\\CreateCouponDto.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\DTOs\\CreateCouponDto.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\DTOs\\CreateCouponDto.cs",
+              "RelativeToolTip": "ShopForHome\\DTOs\\CreateCouponDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T14:20:36.861Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Program.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\Program.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Program.cs",
+              "RelativeToolTip": "ShopForHome\\Program.cs",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAIwJYAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:45:15.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AuthApiController.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Controllers\\API\\AuthApiController.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\Controllers\\API\\AuthApiController.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Controllers\\API\\AuthApiController.cs",
+              "RelativeToolTip": "ShopForHome\\Controllers\\API\\AuthApiController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAYwFgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:48:02.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CartApiController.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Controllers\\API\\CartApiController.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\Controllers\\API\\CartApiController.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Controllers\\API\\CartApiController.cs",
+              "RelativeToolTip": "ShopForHome\\Controllers\\API\\CartApiController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJcAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:53:14.675Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\appsettings.json",
+              "RelativeDocumentMoniker": "ShopForHome\\appsettings.json",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\appsettings.json",
+              "RelativeToolTip": "ShopForHome\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-03-15T14:42:53.864Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ProductsApiController.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Controllers\\API\\ProductsApiController.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\Controllers\\API\\ProductsApiController.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Controllers\\API\\ProductsApiController.cs",
+              "RelativeToolTip": "ShopForHome\\Controllers\\API\\ProductsApiController.cs",
+              "ViewState": "AgIAALgBAAAAAAAAAAAAAMEBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:49:12.165Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "UpdateQuantityDto.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\DTOs\\UpdateQuantityDto.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\DTOs\\UpdateQuantityDto.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\DTOs\\UpdateQuantityDto.cs",
+              "RelativeToolTip": "ShopForHome\\DTOs\\UpdateQuantityDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:54:40.266Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CartItemDto.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\DTOs\\CartItemDto.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\DTOs\\CartItemDto.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\DTOs\\CartItemDto.cs",
+              "RelativeToolTip": "ShopForHome\\DTOs\\CartItemDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:54:05.744Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "PlaceOrderDto.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\DTOs\\PlaceOrderDto.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\DTOs\\PlaceOrderDto.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\DTOs\\PlaceOrderDto.cs",
+              "RelativeToolTip": "ShopForHome\\DTOs\\PlaceOrderDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:58:44.4Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "WishlistApiController.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Controllers\\API\\WishlistApiController.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\Controllers\\API\\WishlistApiController.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Controllers\\API\\WishlistApiController.cs",
+              "RelativeToolTip": "ShopForHome\\Controllers\\API\\WishlistApiController.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAIwIQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:55:24.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "OrdersApiController.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Controllers\\API\\OrdersApiController.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\Controllers\\API\\OrdersApiController.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Controllers\\API\\OrdersApiController.cs",
+              "RelativeToolTip": "ShopForHome\\Controllers\\API\\OrdersApiController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:57:42.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\DTOs\\LoginDto.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\DTOs\\LoginDto.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\DTOs\\LoginDto.cs",
+              "RelativeToolTip": "ShopForHome\\DTOs\\LoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:38:13.331Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "SearchApiController.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Controllers\\API\\SearchApiController.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\Controllers\\API\\SearchApiController.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Controllers\\API\\SearchApiController.cs",
+              "RelativeToolTip": "ShopForHome\\Controllers\\API\\SearchApiController.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAowFAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:50:08.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "WishlistDto.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\DTOs\\WishlistDto.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\DTOs\\WishlistDto.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\DTOs\\WishlistDto.cs",
+              "RelativeToolTip": "ShopForHome\\DTOs\\WishlistDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:56:12.308Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "RegisterDto.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\DTOs\\RegisterDto.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\DTOs\\RegisterDto.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\DTOs\\RegisterDto.cs",
+              "RelativeToolTip": "ShopForHome\\DTOs\\RegisterDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:37:35.115Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "ProductDto.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\DTOs\\ProductDto.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\DTOs\\ProductDto.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\DTOs\\ProductDto.cs",
+              "RelativeToolTip": "ShopForHome\\DTOs\\ProductDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:39:07.079Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "CartDto.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\DTOs\\CartDto.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\DTOs\\CartDto.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\DTOs\\CartDto.cs",
+              "RelativeToolTip": "ShopForHome\\DTOs\\CartDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:39:47.159Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "UsersApiController.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Controllers\\API\\UsersApiController.cs",
+              "RelativeDocumentMoniker": "ShopForHome\\Controllers\\API\\UsersApiController.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\ShopForHome\\ShopForHome\\Controllers\\API\\UsersApiController.cs",
+              "RelativeToolTip": "ShopForHome\\Controllers\\API\\UsersApiController.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAmwFQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T14:56:55.065Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

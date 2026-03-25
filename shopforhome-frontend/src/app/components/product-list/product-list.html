@@ -1,0 +1,254 @@
+<div class="container my-4">
+  <div class="row">
+
+    <!-- Sidebar Filters -->
+    <div class="col-md-3">
+      <div class="card shadow-sm p-3"
+        style="position: sticky; top: 80px;">
+        <h5 class="mb-3 fw-bold">🔍 Filters</h5>
+
+        <label class="form-label fw-bold">
+          Category
+        </label>
+        <select class="form-select mb-3"
+          [(ngModel)]="filters.categoryId">
+          <option [ngValue]="null">
+            All Categories
+          </option>
+          <option *ngFor="let cat of categories"
+            [value]="cat.categoryId">
+            {{ cat.categoryName }}
+          </option>
+        </select>
+
+        <label class="form-label fw-bold">
+          Min Price (₹)
+        </label>
+        <input
+          type="number"
+          class="form-control mb-3"
+          [(ngModel)]="filters.minPrice"
+          placeholder="0" />
+
+        <label class="form-label fw-bold">
+          Max Price (₹)
+        </label>
+        <input
+          type="number"
+          class="form-control mb-3"
+          [(ngModel)]="filters.maxPrice"
+          placeholder="100000" />
+
+        <label class="form-label fw-bold">
+          Min Rating
+        </label>
+        <select class="form-select mb-4"
+          [(ngModel)]="filters.minRating">
+          <option [ngValue]="null">
+            Any Rating
+          </option>
+          <option value="1">⭐ 1 & above</option>
+          <option value="2">⭐⭐ 2 & above</option>
+          <option value="3">
+            ⭐⭐⭐ 3 & above
+          </option>
+          <option value="4">
+            ⭐⭐⭐⭐ 4 & above
+          </option>
+        </select>
+
+        <button
+          type="button"
+          (click)="applyFilters()"
+          style="
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #212529;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 8px;">
+          Apply Filters
+        </button>
+
+        <button
+          type="button"
+          (click)="clearFilters()"
+          style="
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #ffffff;
+            color: #212529;
+            border: 2px solid #212529;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;">
+          Clear Filters
+        </button>
+      </div>
+    </div>
+
+    <!-- Products Section -->
+    <div class="col-md-9">
+
+      <!-- Search Heading -->
+      <div *ngIf="searchQuery" class="mb-3">
+        <h5>
+          Results for:
+          <span class="text-warning">
+            "{{ searchQuery }}"
+          </span>
+          <button
+            type="button"
+            (click)="clearFilters()"
+            style="
+              padding: 4px 10px;
+              background-color: #6c757d;
+              color: #ffffff;
+              border: none;
+              border-radius: 4px;
+              font-size: 0.85rem;
+              cursor: pointer;
+              margin-left: 10px;">
+            ✕ Clear
+          </button>
+        </h5>
+      </div>
+
+      <!-- Loading -->
+      <div *ngIf="loading"
+        class="text-center py-5">
+        <div class="spinner-border text-dark"
+          role="status">
+        </div>
+        <p class="mt-3 text-muted">
+          Loading products...
+        </p>
+      </div>
+
+      <!-- Error -->
+      <div *ngIf="error && !loading"
+        style="
+          background-color: #f8d7da;
+          color: #721c24;
+          border: 1px solid #f5c6cb;
+          border-radius: 8px;
+          padding: 12px 15px;
+          margin-bottom: 15px;">
+        {{ error }}
+      </div>
+
+      <!-- No Products -->
+      <div
+        *ngIf="!loading && !error &&
+          products.length === 0"
+        class="text-center py-5">
+        <h4 class="text-muted">
+          😕 No products found
+        </h4>
+        <p class="text-muted">
+          Try different filters or search terms.
+        </p>
+        <button
+          type="button"
+          (click)="clearFilters()"
+          style="
+            padding: 10px 25px;
+            background-color: #212529;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;">
+          View All Products
+        </button>
+      </div>
+
+      <!-- ✅ Product Grid -->
+      <div class="row g-3"
+        *ngIf="!loading && products.length > 0">
+        <div class="col-md-4 col-sm-6"
+          *ngFor="let p of products">
+          <div class="card h-100 shadow-sm
+            hover-card">
+
+            <!-- ✅ Fixed Image -->
+            <img
+              [src]="getImageUrl(p.imageUrl)"
+              class="card-img-top"
+              style="
+                height: 180px;
+                object-fit: cover;"
+              [alt]="p.productName"
+              (error)="onImageError($event)">
+
+            <div class="card-body">
+              <h6 class="card-title fw-bold">
+                {{ p.productName }}
+              </h6>
+              <small class="text-muted">
+                {{ p.category?.categoryName }}
+              </small>
+              <div class="d-flex
+                justify-content-between
+                align-items-center mt-2">
+                <strong class="text-dark">
+                  ₹{{ p.price }}
+                </strong>
+                <span class="badge
+                  bg-warning text-dark">
+                  ⭐ {{ p.rating }}
+                </span>
+              </div>
+              <small
+                [style.color]="p.stock < 10
+                  ? 'red' : 'green'">
+                Stock: {{ p.stock }}
+                <span *ngIf="p.stock === 0">
+                  ❌ Out of Stock
+                </span>
+                <span *ngIf="p.stock > 0 &&
+                  p.stock < 10">
+                  ⚠️ Low
+                </span>
+              </small>
+            </div>
+
+            <div class="card-footer
+              bg-white border-0 pb-3">
+              <button
+                type="button"
+                (click)="viewDetail(p.productId)"
+                style="
+                  display: block;
+                  width: 100%;
+                  padding: 8px;
+                  background-color: #212529;
+                  color: #ffffff;
+                  border: none;
+                  border-radius: 6px;
+                  font-size: 0.9rem;
+                  font-weight: 600;
+                  cursor: pointer;">
+                View Details
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Count -->
+      <div class="mt-3 text-muted"
+        *ngIf="!loading && products.length > 0">
+        Showing {{ products.length }} product(s)
+      </div>
+
+    </div>
+  </div>
+</div>

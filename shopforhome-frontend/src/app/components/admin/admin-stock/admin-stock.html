@@ -1,0 +1,291 @@
+<div class="container my-4">
+  <h3 class="fw-bold mb-4">
+    🏪 Stock Management
+  </h3>
+
+  <!-- Loading -->
+  <div *ngIf="loading"
+    class="text-center py-5">
+    <div class="spinner-border text-dark"
+      role="status">
+    </div>
+    <p class="mt-2 text-muted">
+      Loading stock data...
+    </p>
+  </div>
+
+  <!-- Summary Cards -->
+  <div class="row g-3 mb-4"
+    *ngIf="!loading">
+    <div class="col-md-3">
+      <div class="card text-center p-3"
+        style="
+          background-color: #212529;
+          color: #ffffff;
+          border-radius: 10px;">
+        <h6>Total Products</h6>
+        <h3>{{ allProducts.length }}</h3>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card text-center p-3"
+        style="
+          background-color: #dc3545;
+          color: #ffffff;
+          border-radius: 10px;">
+        <h6>Out of Stock</h6>
+        <h3>
+          {{ allProducts
+            .filter(p => p.stock === 0)
+            .length }}
+        </h3>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card text-center p-3"
+        style="
+          background-color: #ffc107;
+          color: #212529;
+          border-radius: 10px;">
+        <h6>Low Stock (below 10)</h6>
+        <h3>{{ lowStockProducts.length }}</h3>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card text-center p-3"
+        style="
+          background-color: #28a745;
+          color: #ffffff;
+          border-radius: 10px;">
+        <h6>In Stock</h6>
+        <h3>
+          {{ allProducts
+            .filter(p => p.stock >= 10)
+            .length }}
+        </h3>
+      </div>
+    </div>
+  </div>
+
+  <!-- Low Stock Alert -->
+  <div *ngIf="lowStockProducts.length > 0"
+    style="
+      background-color: #fff3cd;
+      color: #856404;
+      border: 1px solid #ffc107;
+      border-radius: 8px;
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      font-weight: 500;">
+    ⚠️ {{ lowStockProducts.length }}
+    product(s) have stock below 10!
+    Please restock soon.
+  </div>
+
+  <div *ngIf="lowStockProducts.length === 0
+    && !loading"
+    style="
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      border-radius: 8px;
+      padding: 12px 15px;
+      margin-bottom: 20px;
+      font-weight: 500;">
+    ✅ All products are adequately stocked.
+  </div>
+
+  <!-- Low Stock Table -->
+  <div class="card shadow-sm mb-4"
+    *ngIf="lowStockProducts.length > 0">
+    <div class="card-header text-white
+      d-flex justify-content-between
+      align-items-center"
+      style="background-color: #dc3545;">
+      <h6 class="mb-0">
+        ⚠️ Low Stock Products
+        ({{ lowStockProducts.length }})
+      </h6>
+      <button
+        type="button"
+        (click)="loadLowStock()"
+        style="
+          padding: 4px 10px;
+          background-color: transparent;
+          color: #ffffff;
+          border: 1px solid #ffffff;
+          border-radius: 6px;
+          cursor: pointer;
+          font-size: 0.85rem;">
+        🔄 Refresh
+      </button>
+    </div>
+    <div class="card-body p-0">
+      <div class="table-responsive">
+        <table class="table
+          table-hover mb-0">
+          <thead class="table-dark">
+            <tr>
+              <th>#</th>
+              <th>Image</th>
+              <th>Product</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Stock</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let p of
+              lowStockProducts">
+              <td>{{ p.productId }}</td>
+              <td>
+                <img
+                  [src]="getImageUrl(
+                    p.imageUrl)"
+                  width="45"
+                  height="45"
+                  style="
+                    object-fit: cover;
+                    border-radius: 6px;"
+                  [alt]="p.productName"
+                  (error)="
+                    onImageError($event)">
+              </td>
+              <td>
+                <strong>
+                  {{ p.productName }}
+                </strong>
+              </td>
+              <td>
+                {{ p.category?.categoryName }}
+              </td>
+              <td>₹{{ p.price }}</td>
+              <td>
+                <strong
+                  [style.color]="
+                    getStockColor(p.stock)">
+                  {{ p.stock }}
+                </strong>
+              </td>
+              <td>
+                <span
+                  class="badge"
+                  [style.background-color]="
+                    getStockColor(p.stock)"
+                  style="
+                    color: #ffffff;
+                    padding: 5px 10px;
+                    border-radius: 6px;">
+                  {{ getStockStatus(p.stock) }}
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- All Products Stock Table -->
+  <div class="card shadow-sm">
+    <div class="card-header bg-dark
+      text-white d-flex
+      justify-content-between
+      align-items-center">
+      <h6 class="mb-0">
+        All Products Stock
+        ({{ allProducts.length }})
+      </h6>
+      <button
+        type="button"
+        (click)="loadAllProducts()"
+        style="
+          padding: 4px 10px;
+          background-color: transparent;
+          color: #ffffff;
+          border: 1px solid #ffffff;
+          border-radius: 6px;
+          cursor: pointer;
+          font-size: 0.85rem;">
+        🔄 Refresh
+      </button>
+    </div>
+    <div class="card-body p-0">
+      <div *ngIf="allProducts.length === 0"
+        class="text-center py-4 text-muted">
+        No products found.
+      </div>
+      <div class="table-responsive"
+        *ngIf="allProducts.length > 0">
+        <table class="table
+          table-hover mb-0">
+          <thead class="table-dark">
+            <tr>
+              <th>#</th>
+              <th>Image</th>
+              <th>Product</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Stock</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let p of allProducts"
+              [style.background-color]="
+                p.stock === 0
+                  ? '#ffe0e0'
+                  : p.stock < 10
+                  ? '#fff8e1'
+                  : 'transparent'">
+              <td>{{ p.productId }}</td>
+              <td>
+                <img
+                  [src]="getImageUrl(
+                    p.imageUrl)"
+                  width="45"
+                  height="45"
+                  style="
+                    object-fit: cover;
+                    border-radius: 6px;"
+                  [alt]="p.productName"
+                  (error)="
+                    onImageError($event)">
+              </td>
+              <td>
+                <strong>
+                  {{ p.productName }}
+                </strong>
+              </td>
+              <td>
+                {{ p.category?.categoryName }}
+              </td>
+              <td>₹{{ p.price }}</td>
+              <td>
+                <strong
+                  [style.color]="
+                    getStockColor(p.stock)">
+                  {{ p.stock }}
+                </strong>
+              </td>
+              <td>
+                <span
+                  class="badge"
+                  [style.background-color]="
+                    getStockColor(p.stock)"
+                  style="
+                    color: #ffffff;
+                    padding: 5px 10px;
+                    border-radius: 6px;">
+                  {{ getStockStatus(p.stock) }}
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,91 @@
+<div class="container my-4">
+  <h3 class="fw-bold mb-4">📦 My Orders</h3>
+
+  <!-- Loading -->
+  <div *ngIf="loading" class="text-center py-5">
+    <div class="spinner-border text-dark" role="status">
+    </div>
+    <p class="mt-2 text-muted">Loading orders...</p>
+  </div>
+
+  <!-- No Orders -->
+  <div *ngIf="!loading && orders.length === 0"
+    class="text-center py-5">
+    <h4 class="text-muted">📦 No orders yet</h4>
+    <p class="text-muted">
+      Place your first order today!
+    </p>
+    <button
+      type="button"
+      (click)="router.navigate(['/products'])"
+      style="
+        padding: 12px 30px;
+        background-color: #212529;
+        color: #ffffff;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;">
+      Start Shopping
+    </button>
+  </div>
+
+  <!-- Orders List -->
+  <div *ngIf="!loading && orders.length > 0">
+    <div class="card shadow-sm mb-3"
+      *ngFor="let order of orders">
+      <div class="card-header bg-dark text-white
+        d-flex justify-content-between
+        align-items-center">
+        <span class="fw-bold">
+          Order #{{ order.orderId }}
+        </span>
+        <div class="d-flex gap-3 align-items-center">
+          <span class="badge bg-success">
+            {{ order.status }}
+          </span>
+          <small>
+            {{ order.orderDate | date:'mediumDate' }}
+          </small>
+        </div>
+      </div>
+      <div class="card-body">
+        <table class="table table-sm mb-0">
+          <thead class="table-light">
+            <tr>
+              <th>Product</th>
+              <th>Qty</th>
+              <th>Unit Price</th>
+              <th>Subtotal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of order.orderItems">
+              <td>{{ item.product?.productName }}</td>
+              <td>{{ item.quantity }}</td>
+              <td>₹{{ item.unitPrice }}</td>
+              <td>
+                ₹{{ item.quantity * item.unitPrice }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <hr>
+        <div class="row">
+          <div class="col-md-6">
+            <small class="text-muted">
+              Discount Applied:
+              ₹{{ order.discountApplied }}
+            </small>
+          </div>
+          <div class="col-md-6 text-end">
+            <strong class="fs-5">
+              Total: ₹{{ order.totalAmount }}
+            </strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

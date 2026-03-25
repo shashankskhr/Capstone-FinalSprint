@@ -1,0 +1,264 @@
+<div class="container my-4">
+  <h3 class="fw-bold mb-4">
+    📈 Sales Reports
+  </h3>
+
+  <!-- Date Filter Card -->
+  <div class="card shadow-sm p-4 mb-4">
+    <h5 class="fw-bold mb-3">
+      Select Date Range
+    </h5>
+
+    <!-- Error -->
+    <div *ngIf="error"
+      style="
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+        border-radius: 8px;
+        padding: 10px 15px;
+        margin-bottom: 15px;
+        font-weight: 500;">
+      {{ error }}
+    </div>
+
+    <div class="row g-3
+      align-items-end">
+
+      <div class="col-md-4">
+        <label class="form-label fw-bold">
+          From Date
+        </label>
+        <input
+          type="date"
+          class="form-control"
+          [(ngModel)]="form.fromDate" />
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label fw-bold">
+          To Date
+        </label>
+        <input
+          type="date"
+          class="form-control"
+          [(ngModel)]="form.toDate" />
+      </div>
+
+      <div class="col-md-4">
+        <div class="d-flex gap-2">
+          <button
+            type="button"
+            [disabled]="loading"
+            (click)="generate()"
+            style="
+              padding: 10px 20px;
+              background-color: #212529;
+              color: #ffffff;
+              border: none;
+              border-radius: 8px;
+              font-weight: 600;
+              cursor: pointer;
+              width: 100%;">
+            {{ loading
+              ? 'Generating...'
+              : '📊 Generate' }}
+          </button>
+
+          <button
+            type="button"
+            *ngIf="generated"
+            (click)="clearReport()"
+            style="
+              padding: 10px 20px;
+              background-color: #ffffff;
+              color: #212529;
+              border: 2px solid #212529;
+              border-radius: 8px;
+              font-weight: 600;
+              cursor: pointer;
+              white-space: nowrap;">
+            Clear
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Loading -->
+  <div *ngIf="loading"
+    class="text-center py-5">
+    <div class="spinner-border text-dark"
+      role="status">
+    </div>
+    <p class="mt-2 text-muted">
+      Generating report...
+    </p>
+  </div>
+
+  <!-- Report Results -->
+  <div *ngIf="report && !loading">
+
+    <!-- Summary Cards -->
+    <div class="row g-3 mb-4">
+
+      <div class="col-md-4">
+        <div class="card text-center p-4"
+          style="
+            background-color: #212529;
+            color: #ffffff;
+            border-radius: 12px;">
+          <h6 class="mb-2">
+            📦 Total Orders
+          </h6>
+          <h2 class="fw-bold mb-0">
+            {{ report.totalOrders }}
+          </h2>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card text-center p-4"
+          style="
+            background-color: #28a745;
+            color: #ffffff;
+            border-radius: 12px;">
+          <h6 class="mb-2">
+            💰 Total Revenue
+          </h6>
+          <h2 class="fw-bold mb-0">
+            ₹{{ report.totalRevenue }}
+          </h2>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card text-center p-4"
+          style="
+            background-color: #ffc107;
+            color: #212529;
+            border-radius: 12px;">
+          <h6 class="mb-2">
+            🎟️ Total Discount
+          </h6>
+          <h2 class="fw-bold mb-0">
+            ₹{{ report.totalDiscount }}
+          </h2>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- No Orders -->
+    <div
+      *ngIf="report.orders.length === 0"
+      class="text-center py-5">
+      <h5 class="text-muted">
+        😕 No orders found
+        for this date range.
+      </h5>
+    </div>
+
+    <!-- Orders Table -->
+    <div class="card shadow-sm"
+      *ngIf="report.orders.length > 0">
+      <div class="card-header bg-dark
+        text-white d-flex
+        justify-content-between
+        align-items-center">
+        <h6 class="mb-0">
+          Order Details
+          ({{ report.orders.length }})
+        </h6>
+        <small>
+          {{ form.fromDate | date }}
+          —
+          {{ form.toDate | date }}
+        </small>
+      </div>
+
+      <div class="card-body p-0">
+        <div class="table-responsive">
+          <table class="table
+            table-hover mb-0">
+            <thead class="table-dark">
+              <tr>
+                <th>Order ID</th>
+                <th>Customer</th>
+                <th>Date</th>
+                <th>Items</th>
+                <th>Discount</th>
+                <th>Total</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let o of
+                report.orders">
+                <td>
+                  <strong>
+                    #{{ o.orderId }}
+                  </strong>
+                </td>
+                <td>{{ o.customerName }}</td>
+                <td>
+                  {{ o.orderDate | date:
+                    'dd MMM yyyy' }}
+                </td>
+                <td>
+                  <div *ngFor="let item of
+                    o.items"
+                    class="small">
+                    {{ item.productName }}
+                    x{{ item.quantity }}
+                    @ ₹{{ item.unitPrice }}
+                  </div>
+                </td>
+                <td class="text-success">
+                  ₹{{ o.discountApplied }}
+                </td>
+                <td>
+                  <strong>
+                    ₹{{ o.totalAmount }}
+                  </strong>
+                </td>
+                <td>
+                  <span
+                    class="badge"
+                    style="
+                      background-color:
+                        #28a745;
+                      color: #ffffff;
+                      padding: 5px 10px;
+                      border-radius: 6px;">
+                    {{ o.status }}
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+            <tfoot
+              class="table-dark">
+              <tr>
+                <td colspan="4"
+                  class="fw-bold
+                    text-end">
+                  Totals:
+                </td>
+                <td class="fw-bold
+                  text-success">
+                  ₹{{ report.totalDiscount }}
+                </td>
+                <td class="fw-bold">
+                  ₹{{ report.totalRevenue }}
+                </td>
+                <td></td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,213 @@
+<div class="container my-4">
+
+  <!-- Order Placed Success -->
+  <div *ngIf="orderPlaced" class="text-center py-5">
+    <div style="
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      border-radius: 12px;
+      padding: 40px 30px;
+      max-width: 500px;
+      margin: 0 auto;">
+      <h2 style="color:#155724; font-weight:700;">
+        🎉 Order Placed Successfully!
+      </h2>
+      <p style="font-size:1rem; margin-top:10px;">
+        Your order #{{ orderId }} has been placed.
+      </p>
+      <p style="font-size:0.9rem; color:#155724;">
+        Total Paid: ₹{{ getTotal() }}
+      </p>
+    </div>
+    <div class="d-flex gap-3 justify-content-center mt-4">
+      <button
+        type="button"
+        (click)="goToOrders()"
+        style="
+          padding: 12px 25px;
+          background-color: #212529;
+          color: #ffffff;
+          border: none;
+          border-radius: 8px;
+          font-size: 1rem;
+          font-weight: 600;
+          cursor: pointer;">
+        View My Orders
+      </button>
+      <button
+        type="button"
+        (click)="goToProducts()"
+        style="
+          padding: 12px 25px;
+          background-color: #ffffff;
+          color: #212529;
+          border: 2px solid #212529;
+          border-radius: 8px;
+          font-size: 1rem;
+          font-weight: 600;
+          cursor: pointer;">
+        Continue Shopping
+      </button>
+    </div>
+  </div>
+
+  <!-- Checkout Form -->
+  <div *ngIf="!orderPlaced">
+    <h3 class="fw-bold mb-4">Checkout</h3>
+
+    <!-- Loading -->
+    <div *ngIf="loading" class="text-center py-3">
+      <div class="spinner-border text-dark"
+        role="status">
+      </div>
+    </div>
+
+    <!-- Messages -->
+    <div *ngIf="message" style="
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+      border-radius: 8px;
+      padding: 10px 15px;
+      margin-bottom: 15px;">
+      {{ message }}
+    </div>
+
+    <div *ngIf="error" style="
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+      border-radius: 8px;
+      padding: 10px 15px;
+      margin-bottom: 15px;">
+      {{ error }}
+    </div>
+
+    <div class="row" *ngIf="!loading">
+
+      <!-- Items List -->
+      <div class="col-md-8">
+        <div class="card shadow-sm mb-3">
+          <div class="card-header bg-dark text-white">
+            <h6 class="mb-0">
+              Order Items ({{ cartItems.length }})
+            </h6>
+          </div>
+          <div class="card-body p-0">
+            <table class="table table-hover mb-0">
+              <thead class="table-light">
+                <tr>
+                  <th>Product</th>
+                  <th>Price</th>
+                  <th>Qty</th>
+                  <th>Subtotal</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of cartItems">
+                  <td>
+                    <div class="d-flex
+                      align-items-center gap-2">
+                      <img
+                        [src]="item.product?.imageUrl ||
+                          'https://via.placeholder.com/40'"
+                        width="40" height="40"
+                        style="object-fit:cover;
+                          border-radius:4px;"
+                        onerror="this.src=
+                          'https://via.placeholder.com/40'">
+                      <span>{{ item.product?.productName }}</span>
+                    </div>
+                  </td>
+                  <td>₹{{ item.product?.price }}</td>
+                  <td>{{ item.quantity }}</td>
+                  <td>
+                    ₹{{ (item.product?.price || 0)
+                      * item.quantity }}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Summary -->
+      <div class="col-md-4">
+        <div class="card shadow-sm p-4">
+          <h5 class="fw-bold mb-3">Order Summary</h5>
+
+          <!-- Coupon -->
+          <div class="mb-3">
+            <label class="form-label fw-bold">
+              Coupon Code
+            </label>
+            <div class="input-group">
+              <input
+                type="text"
+                class="form-control"
+                [(ngModel)]="couponCode"
+                placeholder="Enter coupon" />
+              <button
+                type="button"
+                (click)="applyCoupon()"
+                style="
+                  padding: 8px 15px;
+                  background-color: #212529;
+                  color: #ffffff;
+                  border: none;
+                  border-radius: 0 6px 6px 0;
+                  font-weight: 600;
+                  cursor: pointer;">
+                Apply
+              </button>
+            </div>
+          </div>
+
+          <hr>
+
+          <div class="d-flex justify-content-between mb-2">
+            <span>Subtotal</span>
+            <span>₹{{ getSubtotal() }}</span>
+          </div>
+          <div class="d-flex justify-content-between
+            mb-2 text-success"
+            *ngIf="discountPercent > 0">
+            <span>Discount ({{ discountPercent }}%)</span>
+            <span>-₹{{ getDiscount() }}</span>
+          </div>
+          <div class="d-flex justify-content-between mb-2">
+            <span>Shipping</span>
+            <span class="text-success">FREE</span>
+          </div>
+          <hr>
+          <div class="d-flex justify-content-between
+            fw-bold fs-5 mb-4">
+            <span>Total</span>
+            <span>₹{{ getTotal() }}</span>
+          </div>
+
+          <button
+            type="button"
+            [disabled]="cartItems.length === 0 || loading"
+            (click)="placeOrder()"
+            style="
+              display: block;
+              width: 100%;
+              padding: 12px;
+              background-color: #212529;
+              color: #ffffff;
+              border: none;
+              border-radius: 8px;
+              font-size: 1rem;
+              font-weight: 600;
+              cursor: pointer;">
+            Place Order 🎉
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

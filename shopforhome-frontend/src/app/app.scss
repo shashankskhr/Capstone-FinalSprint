@@ -1,0 +1,14 @@
+// App Component Styles
+// Global layout styles go here
+
+:host {
+  display: block;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+// Router outlet spacing
+router-outlet + * {
+  display: block;
+  min-height: calc(100vh - 60px);
+}

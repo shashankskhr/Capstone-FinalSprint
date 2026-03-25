@@ -1,0 +1,246 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma,
+    Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+}
+
+.hover-card {
+  transition: transform 0.2s ease,
+    box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px
+    rgba(0, 0, 0, 0.15) !important;
+}
+
+.table th {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 5px 8px;
+  border-radius: 6px;
+}
+
+.form-control,
+.form-select {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #333;
+  box-shadow: 0 0 0 0.2rem
+    rgba(0, 0, 0, 0.1);
+}
+
+.alert {
+  border-radius: 10px;
+  border: none;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+// ===== BUTTON FIXES =====
+.btn {
+  border-radius: 8px;
+  font-weight: 500;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.btn-dark {
+  background-color: #212529 !important;
+  color: #ffffff !important;
+  border: 2px solid #212529 !important;
+}
+
+.btn-dark:hover {
+  background-color: #343a40 !important;
+  color: #ffffff !important;
+  border-color: #343a40 !important;
+}
+
+.btn-dark:focus {
+  background-color: #212529 !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.btn-dark:active {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.btn-dark:disabled {
+  background-color: #6c757d !important;
+  color: #ffffff !important;
+  border-color: #6c757d !important;
+  cursor: not-allowed;
+}
+
+.btn-warning {
+  background-color: #ffc107 !important;
+  color: #212529 !important;
+  border: 2px solid #ffc107 !important;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800 !important;
+  color: #212529 !important;
+}
+
+.btn-danger {
+  background-color: #dc3545 !important;
+  color: #ffffff !important;
+  border: 2px solid #dc3545 !important;
+}
+
+.btn-danger:hover {
+  background-color: #c82333 !important;
+  color: #ffffff !important;
+}
+
+.btn-success {
+  background-color: #28a745 !important;
+  color: #ffffff !important;
+  border: 2px solid #28a745 !important;
+}
+
+.btn-success:hover {
+  background-color: #218838 !important;
+  color: #ffffff !important;
+}
+
+.btn-outline-dark {
+  color: #212529 !important;
+  border: 2px solid #212529 !important;
+  background-color: transparent !important;
+}
+
+.btn-outline-dark:hover {
+  background-color: #212529 !important;
+  color: #ffffff !important;
+}
+
+.btn-outline-secondary {
+  color: #6c757d !important;
+  border: 2px solid #6c757d !important;
+  background-color: transparent !important;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #6c757d !important;
+  color: #ffffff !important;
+}
+
+.btn-outline-danger {
+  color: #dc3545 !important;
+  border: 2px solid #dc3545 !important;
+  background-color: transparent !important;
+}
+
+.btn-outline-danger:hover {
+  background-color: #dc3545 !important;
+  color: #ffffff !important;
+}
+
+.btn-outline-warning {
+  color: #856404 !important;
+  border: 2px solid #ffc107 !important;
+  background-color: transparent !important;
+}
+
+.btn-outline-warning:hover {
+  background-color: #ffc107 !important;
+  color: #212529 !important;
+}
+
+.btn-outline-light {
+  color: #f8f9fa !important;
+  border: 2px solid #f8f9fa !important;
+  background-color: transparent !important;
+}
+
+.btn-outline-light:hover {
+  background-color: #f8f9fa !important;
+  color: #212529 !important;
+}
+
+// ===== FIX YELLOW BUTTON BG =====
+button {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+
+button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+// Fix browser autofill yellow
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px
+    #ffffff inset !important;
+  -webkit-text-fill-color: #333 !important;
+  transition: background-color 5000s
+    ease-in-out 0s;
+}
